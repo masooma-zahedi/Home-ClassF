@@ -32,9 +32,9 @@ export default function Home() {
         description="متن فارسی داستان زیر را بخوانید."
         videoFileName={`${process.env.PUBLIC_URL}/video/fox&crew.mp4`}  // فقط اسم فایل ویدیوی mp4
       /> */}
-    <StoryPage3 groupKey="alefba" wantedTitle="کُمَک بِهتَر اَز خَندَه‌س" />
-    {/* <WordGameWithCategories initialCategory="فروشگاه" /> */}
-    <ChooseWords/>
+    <StoryPage3 groupKey="alefba" wantedTitle="توپِ فوتبال" />
+    <WordGameWithCategories initialCategory="وسایل مدرسه" />
+    {/* <ChooseWords/> */}
     {/* <MatchGame/> */}
     {/* <SyllableAppwithCategory category="ق"/> */}
     {/* <MatchingLettersPicturs/> */}
