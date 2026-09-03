@@ -34,7 +34,7 @@ export default function Home() {
       /> */}
     <ChooseWords/>
     <StoryPage3 groupKey="alefba" wantedTitle="گُربِه‌ی کُوچِک" />
-    {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
+    <WordGameWithCategories initialCategory="وسایل مدرسه" />
     {/* <MatchGame/> */}
     {/* <SyllableAppwithCategory category="ق"/> */}
     {/* <MatchingLettersPicturs/> */}
