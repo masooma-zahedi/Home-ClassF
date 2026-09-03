@@ -19,22 +19,23 @@ export const SylabeWords = () => {
   ];
 
   const datasets = [
-    {
-      id: nanoid(),
-      titleHead: "با هم بخوانیم",
-      titleColor: "rgba(58, 210, 111, 1)",
-      sylabelBg: "rgba(36, 190, 190, 1)",
-        sentenceRow : [
-        [{word:"تاسوعا",syla:"تا+سو+عا"},{word:"دُعا",syla:"دُ+عا"},{word:"سُرعَت",syla:"سُر+عَت"},{word:"شاعِر",syla:"شا+عِر"},{word:"اَعداد",syla:"اَع+داد"}],
-        [{word:"مادَر",syla:"ما+دَر"},{word:"سوپ",syla:""},{word:"عَدَس",syla:"عَ+دَس"},{word:"خوشمَزِه",syla:"خوش+مَ+زِه"},{word:"پُخت.",syla:""}],
-        [{word:"سُرعَت",syla:"سُر+عَت"},{word:"نور",syla:""},{word:"زیاد",syla:"زی+یاد"},{word:"اَست.",syla:""}],
-        [{word:"عَروس",syla:"عَ+روس"},{word:"وَ",syla:""},{word:"داماد",syla:"دا+ماد"},{word:"خوشحال",syla:"خوش+حال"},{word:"بودَند.",syla:"بو+دَند"}],
-        // [{word:"ما",syla:""},{word:"عَدَد",syla:"عَ+دَد"},{word:"پَنج",syla:""},{word:"را",syla:""},{word:"دوست",syla:""},{word:"داریم.",syla:"دا+ریم"}],
-        // [{word:"عادَت",syla:"عا+دَت"},{word:"بِه",syla:""},{word:"وَرزِش",syla:"وَر+زِش"},{word:"خوب",syla:""},{word:"اَست.",syla:""}],
-        // [{word:"عَدَس",syla:"عَ+دَس"},{word:"سَرشار",syla:"سَر+شار"},{word:"اَز",syla:""},{word:"ویتامین",syla:"وی+تا+مین"},{word:"اَست.",syla:""}]
+        {
+        // buttonTargetId:"testSylabe1",
+        id:1,
+        titleHead:"با هم بخوانیم",
+        titleColor:"rgb(187, 39, 88)",
+        sylabelBg:"rgb(209, 79, 79)",
+        sentenceRow: [
+        [ { word:"او", syla:"" }, { word:"توت", syla:"" }, { word:"داد.", syla:"" } ],
+        [ { word:"دوستَم", syla:"دوس + تَم" }, { word:"با", syla:"" }, { word:"سام", syla:"" }, { word:"دَست", syla:"" }, { word:"داد.", syla:"" } ],
+        [ { word:"او", syla:"" }, { word:"تاب", syla:"" }, { word:"بَست.", syla:"" } ],
+        [ { word:"او", syla:"" }, { word:"با", syla:"" }, { word:"اَسَد", syla:"اَ + سَد" }, { word:"دَست", syla:"" }, { word:"داد.", syla:"" } ],
+        [ { word:"سام", syla:"" }, { word:"تاب", syla:"" }, { word:"بَست.", syla:"" } ],
+        [ { word:"سام", syla:"" }, { word:"با", syla:"" }, { word:"اَسَد", syla:"اَ + سَد" }, { word:"دوست", syla:"" }, { word:"اَست.", syla:"" } ],
+        [ { word:"سَبا", syla:"" }, { word:"با", syla:"" }, { word:"سوت", syla:"" }, { word:"آمَد.", syla:"آ + مَد" } ],
+        [ { word:"او", syla:"" }, { word:"ماست", syla:"" }, { word:"داد.", syla:"" } ],
+        ]
 
-      ],
-      
     },
 
   ];
