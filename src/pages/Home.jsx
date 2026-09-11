@@ -21,7 +21,7 @@ import WordHouseGame from "../sections/alphabet/WordHouseGame";
 
 export default function Home() {
   return (<>
-  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}>بچه ها امروز حرف الف را یاد گرفتند. حرف الف را بخوانند و مثال هاش را یاد بگیرند. همین طور فقط با صداهای کوتاه َ ِ ُ آشنا شدند. لطفا از بچه ها بخواهید یک خط حرف ا آ را بنویسند . همین طور کلمات بازی با واژگان را هم یاد بگیرند. .</h4>
+  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}>بچه ها امروز حرف الف و میم را یاد گرفتند. حرف الف و میم را بخوانند و مثال هاش را یاد بگیرند. همین طور با صداهای کوتاه َ ِ ُ به همراه حروف آشنا شدند. لطفا از بچه ها بخواهید کارخانگی را هم بنویسند . . .</h4>
       {/* <ObjectSentenceGame/> */}
       {/* <SentenceObject/> */}
       {/* <TypingImageText/> */}
