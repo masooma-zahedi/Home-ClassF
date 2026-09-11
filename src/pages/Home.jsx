@@ -35,7 +35,6 @@ export default function Home() {
       /> */}
     {/* <StoryPage3 groupKey="alefba" wantedTitle="گُربِه‌ی کُوچِک" /> */}
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
-    {/* <MatchGame/> */}
     {/* <SyllableAppwithCategory category="ق"/> */}
     {/* <MatchingLettersPicturs/> */}
     {/* <BrokenGlass/> */}
@@ -46,7 +45,14 @@ export default function Home() {
     </div> */}
     {/* <WordHouseGame/> */}
     <CardAlphaCompo/> 
-    <ChooseWords/>
+    {/* <ChooseWords/> */}
+    <div className="container text-center my-4">
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی حروف زیر هر کدام دو خط بنویسند</div>
+      <img src={`${process.env.PUBLIC_URL}/images/homework/am.png`} className="w-100" alt="" />
+    </div>
+    <MatchGame/>
+
+
     {/* <DragDropQuiz/> */}
   </>)
 }

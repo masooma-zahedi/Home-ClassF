@@ -325,14 +325,29 @@ const livingRoomLearning = [
     image: "https://media.istockphoto.com/id/545585228/vector/pictures-gallery.jpg?s=612x612&w=0&k=20&c=g5W6VxfvwIWQ7qTy0Mzi0xArS2XrxESqvEQa0KHOrvE="
   }
 ];
+// بهداشت
+const bathroomTools= [
+  { id: 1, word: "صابون", english: "Soap", image: "https://thumbs.dreamstime.com/z/soap-16057006.jpg" },
+  { id: 2, word: "شامپو", english: "Shampoo", image: "https://thumbs.dreamstime.com/b/cartoon-shampoo-bottle-bubbles-text-dispenser-stylized-cartoon-illustration-shampoo-bottle-pump-dispenser-413090846.jpg" },
+  { id: 3, word: "مسواک", english: "Toothbrush", image: "https://img.favpng.com/20/24/21/toothbrush-cartoon-tooth-brushing-clip-art-png-favpng-Cr1Q3GEwAJGciiC2R0ZgFkMAZ.jpg" },
+  { id: 4, word: "خمیر دندان", english: "Toothpaste", image: "https://png.pngtree.com/png-clipart/20230307/ourmid/pngtree-toothpaste-cartoon-png-image_6635972.png" },
+  { id: 5, word: "حوله", english: "Towel", image: "https://static.vecteezy.com/system/resources/previews/039/096/042/non_2x/towel-cartoon-doodle-png.png" },
+  { id: 6, word: "شانه", english: "Comb", image: "https://thumbs.dreamstime.com/b/cute-vector-illustration-hair-comb-cartoon-style-girl-243486338.jpg" },
+  { id: 8, word: "حمام", english: "Bath", image: "https://t3.ftcdn.net/jpg/02/72/87/10/360_F_272871089_YDpDhBLwFYqR2xHmXN6otpW0X5uiWvFu.jpg" },
+  { id: 10, word: "آینه", english: "Mirror", image: "https://static.vecteezy.com/system/resources/previews/068/246/280/non_2x/cartoon-illustration-of-an-ornate-mirror-free-vector.jpg" },
+  { id: 11, word: "دستمال", english: "Tissue", image: "https://thumbs.dreamstime.com/b/cartoon-tissue-box-10308496.jpg" },
+  { id: 12, word: "دوش", english: "Shower", image: "https://png.pngtree.com/png-vector/20241213/ourmid/pngtree-shower-clipart-hd-png-image_14746810.png" },
+
+];
+
 
 
 
 
 
 const MatchGame = ({}) => {
-    const [items,setItems] = useState(livingRoomLearning);
-  const[idModal,setIdModal]=useState('livingRoomLearning');
+    const [items,setItems] = useState(bathroomTools);
+  const[idModal,setIdModal]=useState('bathroomTools');
   const [newtitle,setNewtitle] = useState(false)
 
   const [players, setPlayers] = useState([]);
@@ -403,7 +418,9 @@ const categories = [
   // { title: "احساسات", data: feelingsLearning, key: "item19" },
   // { title: "آب و هوا", data: weatherLearning, key: "item20" },
   // { title: "احساسات غذا", data: foodFeelingsLearning, key: "item21" },
-  { title: "اتاق نشیمن", data: livingRoomLearning, key: "item22" },
+  // { title: "اتاق نشیمن", data: livingRoomLearning, key: "item22" },
+    { title: "بهداشت", data: bathroomTools, key: "item23" },
+
 ];
 
 
