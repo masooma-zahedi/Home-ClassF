@@ -21,7 +21,7 @@ import WordHouseGame from "../sections/alphabet/WordHouseGame";
 
 export default function Home() {
   return (<>
-  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}>بچه ها امروز حرف الف و میم را یاد گرفتند. حرف الف و میم را بخوانند و مثال هاش را یاد بگیرند. همین طور با صداهای کوتاه َ ِ ُ به همراه حروف آشنا شدند. لطفا از بچه ها بخواهید کارخانگی را هم بنویسند . . .</h4>
+  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}>بچه ها امروز حرف الف و میم و نون را یاد گرفتند. حرف الف و میم و نون را بخوانند و مثال هاش را یاد بگیرند. همین طور با صداهای کوتاه َ ِ ُ به همراه حروف آشنا شدند. لطفا از بچه ها بخواهید کارخانگی را هم بنویسند . . .</h4>
       {/* <ObjectSentenceGame/> */}
       {/* <SentenceObject/> */}
       {/* <TypingImageText/> */}
@@ -48,9 +48,13 @@ export default function Home() {
     {/* <ChooseWords/> */}
     <div className="container text-center my-4">
       <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی حروف زیر هر کدام دو خط بنویسند</div>
-      <img src={`${process.env.PUBLIC_URL}/images/homework/am.png`} className="w-100" alt="" />
+      <img src={`${process.env.PUBLIC_URL}/images/homework/jjjj.png`} className="w-100" alt="" />
     </div>
-    <MatchGame/>
+    <div className="container text-center my-4">
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی حروف زیر هر کدام دو خط بنویسند</div>
+      <img src={`${process.env.PUBLIC_URL}/images/homework/mna.png`} className="w-100" alt="" />
+    </div>
+    {/* <MatchGame/> */}
 
 
     {/* <DragDropQuiz/> */}
