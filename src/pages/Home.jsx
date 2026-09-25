@@ -18,12 +18,13 @@ import SyllableAppwithCategory from "../sections/alphabet/SyllableAppwithCategor
 import MatchGame from "../sections/alphabet/MatchGame";
 import ChooseWords from "../sections/alphabet/ChooseWords";
 import WordHouseGame from "../sections/alphabet/WordHouseGame";
+import { CarouselAlphaExp } from "../sections/alphabet/CarouselAlphaExp";
 
 export default function Home() {
   return (<>
-  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}>بچه ها امروز حرف الف و میم و نون را یاد گرفتند. حرف الف و میم و نون را بخوانند و مثال هاش را یاد بگیرند. همین طور با صداهای کوتاه َ ِ ُ به همراه حروف آشنا شدند. لطفا از بچه ها بخواهید کارخانگی را هم بنویسند . . .</h4>
+  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}>بچه ها حروف زیر را یاد بگیرند. لطفا از بچه ها بخواهید کارخانگی را هم بنویسند.</h4>
       {/* <ObjectSentenceGame/> */}
-      {/* <SentenceObject/> */}
+      {/* <SentenceObjecحروفt/> */}
       {/* <TypingImageText/> */}
       {/* <WordFlipBox/> */}
       {/* <SentenceBuilder/> */}
@@ -43,17 +44,27 @@ export default function Home() {
     {/* <div className="container  mt-4" dir="rtl">
       <DragWriteBoxWithGuides width={840} height={520} showGuides={true} downloadName="persian_practice.png" textTitle="آیلین و سِتایِش هَر روز با هَم بازی می کُنَند."/>
     </div> */}
-    {/* <WordHouseGame/> */}
     <CardAlphaCompo/> 
+    <div className="my-4">
+      <h4 className="my-4 text-center bg-info p-3 rounded">صداهای کوتاه</h4>
+      <CarouselAlphaExp idCarouselAlpha="shorthref1"  dataCarousel="alphaShortCrousel"/>
+    </div>
+
+    {/* <div className="my-4">
+      <h4 className="my-4 text-center bg-warning p-3 rounded">صداهای کشیده</h4>
+      <CarouselAlphaExp idCarouselAlpha="longhref1"  dataCarousel="alphaLongCrousel"/>
+    </div> */}
     {/* <ChooseWords/> */}
-    <div className="container text-center my-4">
+    {/* <div className="container text-center my-4">
       <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی حروف زیر هر کدام دو خط بنویسند</div>
       <img src={`${process.env.PUBLIC_URL}/images/homework/jjjj.png`} className="w-100" alt="" />
-    </div>
+    </div> */}
     <div className="container text-center my-4">
-      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی حروف زیر هر کدام دو خط بنویسند</div>
-      <img src={`${process.env.PUBLIC_URL}/images/homework/mna.png`} className="w-100" alt="" />
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی کلمات زیر هر کدام چند بار بنویسند</div>
+      <img src={`${process.env.PUBLIC_URL}/images/homework/rr.png`} className="w-100" alt="" />
     </div>
+        <WordHouseGame/>
+
     {/* <MatchGame/> */}
 
 

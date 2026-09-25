@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function BouncingBalls() {
   // ✅ دسته‌های مختلف
   const categories = {
-    "click to start":["عَذاب","عُرضِه","عَروس","عَزیز","بَعید","ضَعیف","طَبعی","بایِع","عَضو","عَطر","عُروج","عَصا","عَصب","عَیب","وَضع","طَبع","مَنع","عِشق"],
+"click to start":["مامان","نام","نان","مَن","نَم","مار","نَر","رَم","نَرم"],
   };
 
   const colors = ["#ff6b6b", "#6bcfff", "#ffd93d", "#6bff95", "#c86bff", "#ff9f40"];

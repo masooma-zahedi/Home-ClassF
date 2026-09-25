@@ -6,117 +6,147 @@ import React, { useEffect, useState } from "react";
    ========================================================= */
 
 const wordSets = [
-  {
-    id: "he",
-    title: "ح",
-    description: "کلمه‌هایی که با ح شروع می‌شوند",
-    emoji: "🌸",
-    words: [
-      {
-        word: "حَیاط",
-        syllables: ["حَ", "یاط"],
-        sounds: ["ح", "َ", "ی", "ا", "ط"],
-        image: "/images/hayat.png",
-      },
-      {
-        word: "حُوت",
-        syllables: ["حُوت"],
-        sounds: ["ح", "ُ", "و", "ت"],
-        image: "/images/hoot.png",
-      },
-      {
-        word: "حَمام",
-        syllables: ["حَ", "مام"],
-        sounds: ["ح", "َ", "م", "ا", "م"],
-        image: "/images/hamam.png",
-      },
-    ],
-  },
+  // {
+  //   id: "he",
+  //   title: "ح",
+  //   description: "کلمه‌هایی که با ح شروع می‌شوند",
+  //   emoji: "🌸",
+  //   words: [
+  //     {
+  //       word: "حَیاط",
+  //       syllables: ["حَ", "یاط"],
+  //       sounds: ["ح", "َ", "ی", "ا", "ط"],
+  //       image: "/images/hayat.png",
+  //     },
+  //     {
+  //       word: "حُوت",
+  //       syllables: ["حُوت"],
+  //       sounds: ["ح", "ُ", "و", "ت"],
+  //       image: "/images/hoot.png",
+  //     },
+  //     {
+  //       word: "حَمام",
+  //       syllables: ["حَ", "مام"],
+  //       sounds: ["ح", "َ", "م", "ا", "م"],
+  //       image: "/images/hamam.png",
+  //     },
+  //   ],
+  // },
 
-  {
-    id: "mim",
-    title: "م",
-    description: "کلمه‌هایی که با م شروع می‌شوند",
-    emoji: "🌼",
-    words: [
-      {
-        word: "مادَر",
-        syllables: ["ما", "دَر"],
-        sounds: ["م", "ا", "د", "َ", "ر"],
-        image: "/images/mother.png",
-      },
-      {
-        word: "مُوش",
-        syllables: ["مُوش"],
-        sounds: ["م", "ُ", "و", "ش"],
-        image: "/images/mouse.png",
-      },
-      {
-        word: "مَن",
-        syllables: ["مَن"],
-        sounds: ["م", "َ", "ن"],
-      },
-    ],
-  },
+  // {
+  //   id: "mim",
+  //   title: "م",
+  //   description: "کلمه‌هایی که با م شروع می‌شوند",
+  //   emoji: "🌼",
+  //   words: [
+  //     {
+  //       word: "مادَر",
+  //       syllables: ["ما", "دَر"],
+  //       sounds: ["م", "ا", "د", "َ", "ر"],
+  //       image: "/images/mother.png",
+  //     },
+  //     {
+  //       word: "مُوش",
+  //       syllables: ["مُوش"],
+  //       sounds: ["م", "ُ", "و", "ش"],
+  //       image: "/images/mouse.png",
+  //     },
+  //     {
+  //       word: "مَن",
+  //       syllables: ["مَن"],
+  //       sounds: ["م", "َ", "ن"],
+  //     },
+  //   ],
+  // },
 
-  {
-    id: "noon",
-    title: "ن",
-    description: "کلمه‌هایی که با ن شروع می‌شوند",
-    emoji: "🌻",
-    words: [
-      {
-        word: "نان",
-        syllables: ["نان"],
-        sounds: ["ن", "ا", "ن"],
-        image: "/images/bread.png",
-      },
-      {
-        word: "نُور",
-        syllables: ["نُور"],
-        sounds: ["ن", "ُ", "و", "ر"],
-        image: "/images/light.png",
-      },
-      {
-        word: "نارَس",
-        syllables: ["نا", "رَس"],
-        sounds: ["ن", "ا", "ر", "َ", "س"],
-        image: "/images/naras.png",
-      },
-    ],
-  },
+  // {
+  //   id: "noon",
+  //   title: "ن",
+  //   description: "کلمه‌هایی که با ن شروع می‌شوند",
+  //   emoji: "🌻",
+  //   words: [
+  //     {
+  //       word: "نان",
+  //       syllables: ["نان"],
+  //       sounds: ["ن", "ا", "ن"],
+  //       image: "/images/bread.png",
+  //     },
+  //     {
+  //       word: "نُور",
+  //       syllables: ["نُور"],
+  //       sounds: ["ن", "ُ", "و", "ر"],
+  //       image: "/images/light.png",
+  //     },
+  //     {
+  //       word: "نارَس",
+  //       syllables: ["نا", "رَس"],
+  //       sounds: ["ن", "ا", "ر", "َ", "س"],
+  //       image: "/images/naras.png",
+  //     },
+  //   ],
+  // },
 
   {
     id: "lesson-1",
     title: "درس اول",
     description: "کلمه‌های درس اول",
     emoji: "📚",
-    words: [
-      {
-        word: "نان",
-        syllables: ["نان"],
-        sounds: ["ن", "ا", "ن"],
-        image: "/images/bread.png",
-      },
-      {
-        word: "آتش",
-        syllables: ["آ", "تَش"],
-        sounds: ["آ", "ت", "َ", "ش"],
-        image: "/images/fire.png",
-      },
-      {
-        word: "دانا",
-        syllables: ["دا", "نا"],
-        sounds: ["د", "ا", "ن", "ا"],
-        image: "/images/dana.png",
-      },
-      {
-        word: "نُور",
-        syllables: ["نُور"],
-        sounds: ["ن", "ُ", "و", "ر"],
-        image: "/images/light.png",
-      },
-    ],
+words: [
+  {
+    word: "مامان",
+    syllables: ["ما", "مان"],
+    sounds: ["م", "ا", "م", "ا", "ن"],
+    image: "",
+  },
+  {
+    word: "نام",
+    syllables: ["نام"],
+    sounds: ["ن", "ا", "م"],
+    image: "https://static.vecteezy.com/system/resources/previews/014/830/187/non_2x/name-writing-card-and-cute-boy-vector.jpg",
+  },
+  {
+    word: "نان",
+    syllables: ["نان"],
+    sounds: ["ن", "ا", "ن"],
+    image: "https://i.graphicmama.com/uploads/2023/3/6423e5bbaf34a-bread-chef-cartoon-character.png",
+  },
+  {
+    word: "مَن",
+    syllables: ["مَن"],
+    sounds: ["م", "َ", "ن"],
+    image: "https://thumbs.dreamstime.com/z/alphabet-kid-cartoon-letter-i-isolated-white-background-215870075.jpg",
+  },
+  {
+    word: "نَم",
+    syllables: ["نَم"],
+    sounds: ["ن", "َ", "م"],
+    image: "https://thumb.ac-illust.com/9a/9ad21602e3b0bc58f3c78a2f04c0b2eb_t.jpeg",
+  },
+  {
+    word: "مار",
+    syllables: ["مار"],
+    sounds: ["م", "ا", "ر"],
+    image: "https://png.pngtree.com/png-vector/20240216/ourmid/pngtree-snake-illustration-png-image_11743292.png",
+  },
+  {
+    word: "نَر",
+    syllables: ["نَر"],
+    sounds: ["ن", "َ", "ر"],
+    image: "/images/male.png",
+  },
+  {
+    word: "رَم",
+    syllables: ["رَم"],
+    sounds: ["ر", "َ", "م"],
+    image: "/images/ram.png",
+  },
+  {
+    word: "نَرم",
+    syllables: ["نَرم"],
+    sounds: ["ن", "َ", "ر", "م"],
+    image: "https://c8.alamy.com/comp/2AHXJAH/illustration-of-a-kid-girl-hugging-a-soft-pillow-soft-adjective-sample-2AHXJAH.jpg",
+  },
+],
   },
 ];
 

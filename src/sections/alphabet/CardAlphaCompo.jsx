@@ -124,17 +124,6 @@ export let infoCard = [
     //     longSoundId:"letterZal-2"
     // },
     // {
-    //     mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/05-10-24-ر-2.jpg`,
-    //     title:"حرف ر ",
-    //     picFinger:`https://t4.ftcdn.net/jpg/13/26/76/83/360_F_1326768359_D9md2oIwSgxY45tKP2LNhY7QmRONmBss.jpg`,
-    //     examplePic:[`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ر-1.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ر-2.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ر-3.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ر-4.png`,],
-    //     examplePicId:"exampleL-R1",
-    //     shortSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/05-10-24-ر-1.jpg`,
-    //     shortSoundId:"letterR-1",
-    //     longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/ر-long-1.jpg`,
-    //     longSoundId:"letterR-2"
-    // },
-    // {
     //     mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/05-10-24-ز-2.jpg`,
     //     title:"حرف ز ",
     //     picFinger:`https://img.freepik.com/free-vector/cheerful-cartoon-bee-with-bright-blue-eyes_1308-180308.jpg?semt=ais_incoming&w=740&q=80`,
@@ -320,6 +309,17 @@ export let infoCard = [
         shortSoundId:"letterNoon-2",
         longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/10-19-ن-long.jpg`,
         longSoundId:"letterNoon-3"
+    },
+    {
+        mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/05-10-24-ر-2.jpg`,
+        title:"حرف ر ",
+        picFinger:`https://t4.ftcdn.net/jpg/13/26/76/83/360_F_1326768359_D9md2oIwSgxY45tKP2LNhY7QmRONmBss.jpg`,
+        examplePic:[`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ر-1.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ر-2.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ر-3.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ر-4.png`,],
+        examplePicId:"exampleL-R1",
+        shortSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/05-10-24-ر-1.jpg`,
+        shortSoundId:"letterR-1",
+        longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/ر-long-1.jpg`,
+        longSoundId:"letterR-2"
     },
     // {
     //     mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/10-14-24-ه.jpg`,
