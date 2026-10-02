@@ -102,17 +102,6 @@ export let infoCard = [
     //     longSoundId:"letterKH-2"
     // },
     // {
-    //     mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/د-30-10-1.jpg`,
-    //     title:"حرف د ",
-    //     picFinger:`https://png.pngtree.com/png-clipart/20250116/original/pngtree-cartoon-dolphin-jumping-out-of-water-png-image_20170566.png`,
-    //     examplePic:[`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-د-1.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-د-2.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-د-3.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-د-4.png`,],
-    //     examplePicId:"exampleL-D1",
-    //     shortSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/05-10-24-د-1.jpg`,
-    //     shortSoundId:"letterD-1",
-    //     longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/د-long-1.jpg`,
-    //     longSoundId:"letterD-2"
-    // },
-    // {
     //     mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/05-10-24-ذ-2.jpg`,
     //     title:"حرف ذ ",
     //     picFinger:`https://png.pngtree.com/png-clipart/20250508/original/pngtree-happy-corn-cartoon-character-png-image_20945957.png`,
@@ -321,6 +310,18 @@ export let infoCard = [
         longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/ر-long-1.jpg`,
         longSoundId:"letterR-2"
     },
+        {
+        mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/د-30-10-1.jpg`,
+        title:"حرف د ",
+        picFinger:`https://png.pngtree.com/png-clipart/20250116/original/pngtree-cartoon-dolphin-jumping-out-of-water-png-image_20170566.png`,
+        examplePic:[`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-د-1.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-د-2.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-د-3.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-د-4.png`,],
+        examplePicId:"exampleL-D1",
+        shortSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/05-10-24-د-1.jpg`,
+        shortSoundId:"letterD-1",
+        longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/د-long-1.jpg`,
+        longSoundId:"letterD-2"
+    },
+
     // {
     //     mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/10-14-24-ه.jpg`,
     //     title:"حرف ه ",

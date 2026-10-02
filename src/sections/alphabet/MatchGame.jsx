@@ -340,6 +340,26 @@ const bathroomTools= [
 
 ];
 
+// برای کلاس F 
+const wordsLearning = [
+  { id: 1, word: "دار", english: "tree", image: "/images/tree.png" },
+  { id: 2, word: "داد", english: "gave", image: "/images/give.png" },
+  { id: 3, word: "دَر", english: "door", image: "/images/door.png" },
+  { id: 4, word: "دُر", english: "pearl", image: "/images/pearl.png" },
+  { id: 5, word: "مادَر", english: "mother", image: "/images/mother.png" },
+  { id: 6, word: "دارَم", english: "I have", image: "/images/have.png" },
+  { id: 7, word: "دارَد", english: "he/she has", image: "/images/has.png" },
+  { id: 8, word: "مامان", english: "mom", image: "" },
+  { id: 9, word: "نام", english: "name", image: "https://static.vecteezy.com/system/resources/previews/014/830/187/non_2x/name-writing-card-and-cute-boy-vector.jpg" },
+  { id: 10, word: "نان", english: "bread", image: "https://i.graphicmama.com/uploads/2023/3/6423e5bbaf34a-bread-chef-cartoon-character.png" },
+  { id: 11, word: "مَن", english: "I / me", image: "https://thumbs.dreamstime.com/z/alphabet-kid-cartoon-letter-i-isolated-white-background-215870075.jpg" },
+  { id: 12, word: "نَم", english: "wet / moist", image: "https://thumb.ac-illust.com/9a/9ad21602e3b0bc58f3c78a2f04c0b2eb_t.jpeg" },
+  { id: 13, word: "مار", english: "snake", image: "https://png.pngtree.com/png-vector/20240216/ourmid/pngtree-snake-illustration-png-image_11743292.png" },
+  { id: 14, word: "نَر", english: "male", image: "/images/male.png" },
+  { id: 15, word: "رَم", english: "ram", image: "/images/ram.png" },
+  { id: 16, word: "نَرم", english: "soft", image: "https://c8.alamy.com/comp/2AHXJAH/illustration-of-a-kid-girl-hugging-a-soft-pillow-soft-adjective-sample-2AHXJAH.jpg" }
+];
+
 
 
 

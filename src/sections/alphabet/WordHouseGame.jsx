@@ -88,10 +88,52 @@ const wordSets = [
 
   {
     id: "lesson-1",
-    title: "درس اول",
-    description: "کلمه‌های درس اول",
+    title: "درس با هم بخوانیم",
+    description: "کلمه‌های درس پنجم",
     emoji: "📚",
 words: [
+  {
+  word: "دار",
+  syllables: ["دار"],
+  sounds: ["د", "ا", "ر"],
+  image: "/images/tree.png",
+},
+{
+  word: "داد",
+  syllables: ["داد"],
+  sounds: ["د", "ا", "د"],
+  image: "/images/give.png",
+},
+{
+  word: "دَر",
+  syllables: ["دَر"],
+  sounds: ["د", "َ", "ر"],
+  image: "/images/door.png",
+},
+{
+  word: "دُر",
+  syllables: ["دُر"],
+  sounds: ["د", "ُ", "ر"],
+  image: "/images/pearl.png",
+},
+{
+  word: "مادَر",
+  syllables: ["ما", "دَر"],
+  sounds: ["م", "ا", "د", "َ", "ر"],
+  image: "/images/mother.png",
+},
+{
+  word: "دارَم",
+  syllables: ["دا", "رَم"],
+  sounds: ["د", "ا", "ر", "َ", "م"],
+  image: "/images/have.png",
+},
+{
+  word: "دارَد",
+  syllables: ["دا", "رَد"],
+  sounds: ["د", "ا", "ر", "َ", "د"],
+  image: "/images/has.png",
+},
   {
     word: "مامان",
     syllables: ["ما", "مان"],

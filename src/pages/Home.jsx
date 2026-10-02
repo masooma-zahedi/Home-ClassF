@@ -61,9 +61,12 @@ export default function Home() {
     </div> */}
     <div className="container text-center my-4">
       <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی کلمات زیر هر کدام چند بار بنویسند</div>
-      <img src={`${process.env.PUBLIC_URL}/images/homework/rr.png`} className="w-100" alt="" />
+      <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" />
     </div>
+    <div className="container text-center my-5">
+      <div className="bg-warning h5 p-4"> لطفا بچه ها کلمات زیر را بخوانند و تمرین کنند.</div>
         <WordHouseGame/>
+    </div>
 
     {/* <MatchGame/> */}
 
