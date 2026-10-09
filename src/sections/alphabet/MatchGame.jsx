@@ -420,7 +420,7 @@ const categories = [
   // { title: "خوراکی کمپینگ", data: items1, key: "item1" },
   // { title: "وسایل کمپینگ", data: items2, key: "item2" },
   // { title: "طَبیعَت", data: items3, key: "item3" },
-  // { title: "صبحانه", data: itemsFood, key: "item4" },
+  { title: "صبحانه", data: itemsFood, key: "item4" },
   // { title: "حمل و نقل", data: transport1, key: "item5" },
   // { title: "میز غذاخوری", data: diningTableItems, key: "item6" },
   // { title: "وسایل حمام", data: bathItems, key: "item7" },
@@ -439,7 +439,7 @@ const categories = [
   // { title: "آب و هوا", data: weatherLearning, key: "item20" },
   // { title: "احساسات غذا", data: foodFeelingsLearning, key: "item21" },
   // { title: "اتاق نشیمن", data: livingRoomLearning, key: "item22" },
-    { title: "بهداشت", data: bathroomTools, key: "item23" },
+    // { title: "بهداشت", data: bathroomTools, key: "item23" },
 
 ];
 

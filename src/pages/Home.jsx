@@ -22,7 +22,12 @@ import { CarouselAlphaExp } from "../sections/alphabet/CarouselAlphaExp";
 
 export default function Home() {
   return (<>
-  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}>بچه ها حروف زیر را یاد بگیرند. لطفا از بچه ها بخواهید کارخانگی را هم بنویسند.</h4>
+  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}> با بچه ها کلمات زیر را تمرین کنید.</h4>
+      <div className="container text-center my-4">
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 15 کلمه اول هر کدام یک بار بنویسند</div>
+      {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
+    </div>
+
       {/* <ObjectSentenceGame/> */}
       {/* <SentenceObjecحروفt/> */}
       {/* <TypingImageText/> */}
@@ -38,7 +43,7 @@ export default function Home() {
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
     {/* <SyllableAppwithCategory category="ق"/> */}
     {/* <MatchingLettersPicturs/> */}
-    {/* <BrokenGlass/> */}
+    <BrokenGlass/>
     {/* <BouncingBalls/> */}
 
     {/* <div className="container  mt-4" dir="rtl">
@@ -60,15 +65,15 @@ export default function Home() {
       <img src={`${process.env.PUBLIC_URL}/images/homework/jjjj.png`} className="w-100" alt="" />
     </div> */}
     <div className="container text-center my-4">
-      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی کلمات زیر هر کدام چند بار بنویسند</div>
-      <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" />
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 15 کلمه اول هر کدام یک بار بنویسند</div>
+      {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
     <div className="container text-center my-5">
       <div className="bg-warning h5 p-4"> لطفا بچه ها کلمات زیر را بخوانند و تمرین کنند.</div>
         <WordHouseGame/>
     </div>
 
-    {/* <MatchGame/> */}
+    <MatchGame/>
 
 
     {/* <DragDropQuiz/> */}
