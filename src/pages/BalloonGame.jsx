@@ -1,11 +1,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
-const DEFAULT_WORDS = [
-  "سیب", "کتاب", "مدرسه", "بابا",
-  "مادر", "مداد", "درخت", "دوست",
-  "آب", "نان",
-];
+const DEFAULT_WORDS = ["آب", "بابا", "ناب", "بار", "باد", "بام", "باران", "بَد", "بَم", "بَر", "بُرد", "دار", "داد", "دَر", "دُر", "مادَر", "دارَم", "دارَد","مامان", "نام", "نان", "مَن", "نَم", "مار", "رَم", "نَرم",]
 
 const COLORS = [
   "#ff5577", "#ffb52e", "#8065ef", "#42bd72",
@@ -418,7 +414,7 @@ function createExplosion(balloon) {
 
 export default function BalloonGame({
   words = DEFAULT_WORDS,
-  rounds = 10,
+  rounds = 20,
 }) {
   const [balloons, setBalloons] = useState([]);
   const [target, setTarget] = useState("");
@@ -433,6 +429,23 @@ export default function BalloonGame({
   const timersRef = useRef([]);
   const balloonsRef = useRef([]);
   const lockedRef = useRef(false);
+
+  
+const [musicOn, setMusicOn] = useState(false);
+const musicRef = useRef(null);
+
+useEffect(() => {
+  const audio = new Audio(`${process.env.PUBLIC_URL}/sounds/soft-1.mp3`);
+  audio.loop = true;
+  audio.volume = 0.15;
+  musicRef.current = audio;
+
+  return () => {
+    audio.pause();
+    audio.src = "";
+    musicRef.current = null;
+  };
+}, []);
 
   function clearTimers() {
     timersRef.current.forEach(clearTimeout);
@@ -535,55 +548,141 @@ vy = Math.max(-0.01, Math.min(0.01, vy));
     return () => cancelAnimationFrame(frameId);
   }, []);
 
-  function handleClick(balloon) {
-    if (lockedRef.current || finished) return;
 
-    if (balloon.word !== target) {
-      setMessage("این کلمه نیست! دوباره امتحان کن 😊");
-      return;
+function getAudioContext() {
+  const AudioContextClass =
+    window.AudioContext || window.webkitAudioContext;
+
+  if (!AudioContextClass) return null;
+
+  if (!audioRef.current) {
+    audioRef.current = new AudioContextClass();
+  }
+
+  return audioRef.current;
+}
+
+// صدای ملایم برای انتخاب اشتباه
+function playWrongSound() {
+  try {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+
+    if (ctx.state === "suspended") {
+      ctx.resume();
     }
 
-    lockedRef.current = true;
-    setPoppingId(balloon.id);
-    setScore((previous) => previous + 1);
-    setMessage("آفرین! پوففف! 💥🎉");
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    const now = ctx.currentTime;
 
-    playPopSound(audioRef);
-
-    const pieces = createExplosion(balloon);
-    setExplosions(pieces);
-
-    // پس از انفجار، بالن اصلی حذف می‌شود
-    timersRef.current.push(
-      setTimeout(() => {
-        balloonsRef.current = balloonsRef.current.filter(
-          (b) => b.id !== balloon.id
-        );
-        setBalloons([...balloonsRef.current]);
-        setPoppingId(null);
-      }, 300)
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(330, now);
+    osc.frequency.exponentialRampToValueAtTime(
+      220,
+      now + 0.22
     );
 
-    // تکه‌های انفجار پس از مدت کوتاهی ناپدید می‌شوند
-    timersRef.current.push(
-      setTimeout(() => setExplosions([]), 720)
+    gain.gain.setValueAtTime(0.001, now);
+    gain.gain.linearRampToValueAtTime(0.16, now + 0.025);
+    gain.gain.exponentialRampToValueAtTime(
+      0.001,
+      now + 0.25
     );
 
-    // آغاز مرحله بعد
-    timersRef.current.push(
-      setTimeout(() => {
-        if (round >= rounds) {
-          setFinished(true);
-          setMessage("تبریک! بازی را تمام کردی! 🏆");
-          return;
-        }
+    osc.connect(gain);
+    gain.connect(ctx.destination);
 
-        const nextRound = round + 1;
-        setRound(nextRound);
-        newRound(nextRound);
-      }, 950)
-    );
+    osc.start(now);
+    osc.stop(now + 0.27);
+  } catch (error) {
+    // بازی بدون صدا هم قابل اجراست.
   }
+}
+
+
+function startMusic() {
+  const audio = musicRef.current;
+  if (!audio) return;
+
+  audio.play()
+    .then(() => setMusicOn(true))
+    .catch(() => setMusicOn(false));
+}
+
+function stopMusic() {
+  const audio = musicRef.current;
+  if (!audio) return;
+
+  audio.pause();
+  setMusicOn(false);
+}
+
+function toggleMusic() {
+  if (musicOn) {
+    stopMusic();
+  } else {
+    startMusic();
+  }
+}
+
+
+
+function handleClick(balloon) {
+  
+  if (lockedRef.current || finished) return;
+
+  // شروع موسیقی پس از اولین تعامل دانش‌آموز
+  if (!musicRef.current || musicRef.current.paused) {
+  startMusic();
+}
+
+  if (balloon.word !== target) {
+    setMessage("این کلمه نیست! دوباره امتحان کن 😊");
+    playWrongSound();
+    return;
+  }
+
+  lockedRef.current = true;
+  setPoppingId(balloon.id);
+  setScore((previous) => previous + 1);
+  setMessage("آفرین! پوففف! 💥🎉");
+
+  playPopSound(audioRef);
+
+  const pieces = createExplosion(balloon);
+  setExplosions(pieces);
+
+  timersRef.current.push(
+    setTimeout(() => {
+      balloonsRef.current = balloonsRef.current.filter(
+        (b) => b.id !== balloon.id
+      );
+      setBalloons([...balloonsRef.current]);
+      setPoppingId(null);
+    }, 300)
+  );
+
+  timersRef.current.push(
+    setTimeout(() => setExplosions([]), 720)
+  );
+
+  timersRef.current.push(
+    setTimeout(() => {
+      if (round >= rounds) {
+        setFinished(true);
+        setMessage("تبریک! بازی را تمام کردی! 🏆");
+        stopMusic();
+        return;
+      }
+
+      const nextRound = round + 1;
+      setRound(nextRound);
+      newRound(nextRound);
+    }, 950)
+  );
+}
+
 
   function restartGame() {
     clearTimers();
@@ -605,6 +704,25 @@ vy = Math.max(-0.01, Math.min(0.01, vy));
             <span>⭐ امتیاز: {score}</span>
             <span>مرحله: {round} از {rounds}</span>
           </div>
+
+<button
+  type="button"
+  onClick={toggleMusic}
+  aria-pressed={musicOn}
+  style={{
+    padding: "9px 18px",
+    margin: "0 auto 14px",
+    border: "none",
+    borderRadius: "18px",
+    background: musicOn ? "#d9f7df" : "#ffffff",
+    color: "#24345b",
+    fontSize: "15px",
+    fontWeight: "bold",
+    cursor: "pointer",
+  }}
+>
+  {musicOn ? "🔊 خاموش کردن موسیقی" : "🎵 پخش موسیقی"}
+</button>
 
           <div className="target">
             <p>این کلمه را پیدا کن:</p>

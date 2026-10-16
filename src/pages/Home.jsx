@@ -28,19 +28,7 @@ export default function Home() {
       <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 5 جمله زیر بنویسند</div>
       {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
-<BalloonGame
-      words={[
-        "بابا",
-        "آب",
-        "باد",
-        "داد",
-        "بادام",
-        "آباد",
-        "مادر",
-        "مداد",
-      ]}
-      rounds={8}
-    />    
+{/* <BalloonGame words={["بابا", "ناب", "بار", "باد", "بام", "باران", "بَد", "بَم", "بَر", "بُرد", "دار", "داد", "دَر", "دُر", "مادَر", "دارَم", "دارَد","مامان", "نام", "نان", "مَن", "نَم", "مار", "رَم", "نَرم"]} rounds={20}/>     */}
       {/* <ObjectSentenceGame/> */}
       {/* <SentenceObjecحروفt/> */}
       {/* <TypingImageText/> */}
