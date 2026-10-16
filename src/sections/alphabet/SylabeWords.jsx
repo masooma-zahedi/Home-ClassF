@@ -19,24 +19,68 @@ export const SylabeWords = () => {
   ];
 
   const datasets = [
-        {
-        // buttonTargetId:"testSylabe1",
-        id:1,
-        titleHead:"با هم بخوانیم",
-        titleColor:"rgb(187, 39, 88)",
-        sylabelBg:"rgb(209, 79, 79)",
-        sentenceRow: [
-        [ { word:"او", syla:"" }, { word:"توت", syla:"" }, { word:"داد.", syla:"" } ],
-        [ { word:"دوستَم", syla:"دوس + تَم" }, { word:"با", syla:"" }, { word:"سام", syla:"" }, { word:"دَست", syla:"" }, { word:"داد.", syla:"" } ],
-        [ { word:"او", syla:"" }, { word:"تاب", syla:"" }, { word:"بَست.", syla:"" } ],
-        [ { word:"او", syla:"" }, { word:"با", syla:"" }, { word:"اَسَد", syla:"اَ + سَد" }, { word:"دَست", syla:"" }, { word:"داد.", syla:"" } ],
-        [ { word:"سام", syla:"" }, { word:"تاب", syla:"" }, { word:"بَست.", syla:"" } ],
-        [ { word:"سام", syla:"" }, { word:"با", syla:"" }, { word:"اَسَد", syla:"اَ + سَد" }, { word:"دوست", syla:"" }, { word:"اَست.", syla:"" } ],
-        [ { word:"سَبا", syla:"" }, { word:"با", syla:"" }, { word:"سوت", syla:"" }, { word:"آمَد.", syla:"آ + مَد" } ],
-        [ { word:"او", syla:"" }, { word:"ماست", syla:"" }, { word:"داد.", syla:"" } ],
-        ]
+    {
+  id: 11,
+  titleHead: "کلاس F",
+  titleColor: "rgb(180, 210, 58)",
+  sylabelBg: "rgb(167, 36, 190)",
+  sentenceRow: [
+    [
+      { word: "مَن", syla: "مَن" },
+      { word: "نان", syla: "نان" },
+      { word: "دارَم.", syla: "دا + رَم" }
+    ],
+    [
+      { word: "مَن", syla: "مَن" },
+      { word: "اَنار", syla: "اَ + نار" },
+      { word: "دارَم.", syla: "دا + رَم" }
+    ],
+    [
+      { word: "مادَر", syla: "ما + دَر" },
+      { word: "نان", syla: "نان" },
+      { word: "دارَد.", syla: "دا + رَد" }
+    ],
+    [
+      { word: "مادَر", syla: "ما + دَر" },
+      { word: "اَنار", syla: "اَ + نار" },
+      { word: "دارَد.", syla: "دا + رَد" }
+    ],
+    [
+      { word: "بابا", syla: "با + با" },
+      { word: "نان", syla: "نان" },
+      { word: "داد.", syla: "دا + د" }
+    ],
+    [
+      { word: "بابا", syla: "با + با" },
+      { word: "اَنار", syla: "اَ + نار" },
+      { word: "دارَد.", syla: "دا + رَد" }
+    ],
+    [
+      { word: "مادَر", syla: "ما + دَر" },
+      { word: "دَر", syla: " دَر" },
+      { word: "باران", syla: " با + ران" },
+      { word: "آمَد.", syla: "آ + مَد" }
+    ],
+    [
+      { word: "بَرادَر", syla: "بَ + را + دَر" },
+      { word: "با", syla: "با" },
+      { word: "مادَر", syla: "ما + دَر" },
+      { word: "آمَد.", syla: "آ + مَد" }
+    ],
+    [
+      { word: "باران", syla: "با + ران" },
+      { word: "نَم نَم", syla: "نَم + نَم" },
+      { word: "آمَد.", syla: "آ + مَد" }
+    ],
+    [
+      { word: "اَبر", syla: "اَ + بر" },
+      { word: "با", syla: "با" },
+      { word: "باد", syla: "با + د" },
+      { word: "آمَد.", syla: "آ + مَد" }
+    ],
 
-    },
+  ],
+},
 
   ];
 

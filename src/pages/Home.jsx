@@ -22,9 +22,9 @@ import { CarouselAlphaExp } from "../sections/alphabet/CarouselAlphaExp";
 
 export default function Home() {
   return (<>
-  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}> با بچه ها کلمات زیر را تمرین کنید.</h4>
+  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}> با بچه ها جملات زیر را تمرین کنید.</h4>
       <div className="container text-center my-4">
-      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 15 کلمه اول هر کدام یک بار بنویسند</div>
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 5 جمله زیر بنویسند</div>
       {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
 
@@ -33,7 +33,7 @@ export default function Home() {
       {/* <TypingImageText/> */}
       {/* <WordFlipBox/> */}
       {/* <SentenceBuilder/> */}
-        {/* <SylabeWords/> */}
+        <SylabeWords/>
       {/* <VideoCard
         title="قصه کوتاه امروز"
         description="متن فارسی داستان زیر را بخوانید."
@@ -43,7 +43,7 @@ export default function Home() {
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
     {/* <SyllableAppwithCategory category="ق"/> */}
     {/* <MatchingLettersPicturs/> */}
-    <BrokenGlass/>
+    {/* <BrokenGlass/> */}
     {/* <BouncingBalls/> */}
 
     {/* <div className="container  mt-4" dir="rtl">
