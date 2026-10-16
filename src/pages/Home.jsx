@@ -19,6 +19,7 @@ import MatchGame from "../sections/alphabet/MatchGame";
 import ChooseWords from "../sections/alphabet/ChooseWords";
 import WordHouseGame from "../sections/alphabet/WordHouseGame";
 import { CarouselAlphaExp } from "../sections/alphabet/CarouselAlphaExp";
+import BalloonGame from "./BalloonGame";
 
 export default function Home() {
   return (<>
@@ -27,7 +28,19 @@ export default function Home() {
       <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 5 جمله زیر بنویسند</div>
       {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
-
+<BalloonGame
+      words={[
+        "بابا",
+        "آب",
+        "باد",
+        "داد",
+        "بادام",
+        "آباد",
+        "مادر",
+        "مداد",
+      ]}
+      rounds={8}
+    />    
       {/* <ObjectSentenceGame/> */}
       {/* <SentenceObjecحروفt/> */}
       {/* <TypingImageText/> */}
