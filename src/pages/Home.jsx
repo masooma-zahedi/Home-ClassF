@@ -19,7 +19,7 @@ import MatchGame from "../sections/alphabet/MatchGame";
 import ChooseWords from "../sections/alphabet/ChooseWords";
 import WordHouseGame from "../sections/alphabet/WordHouseGame";
 import { CarouselAlphaExp } from "../sections/alphabet/CarouselAlphaExp";
-import BalloonGame from "./BalloonGame";
+import BalloonGame from "../sections/alphabet/BalloonGame";
 
 export default function Home() {
   return (<>
