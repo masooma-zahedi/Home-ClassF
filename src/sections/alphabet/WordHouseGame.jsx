@@ -193,9 +193,87 @@ const wordSets = [
   {
   id: "lesson-1",
   title: "درس با هم بخوانیم",
-  description: "کلمه‌های درس ششم",
+  description: "کلمه‌های درس جدید",
   emoji: "📚",
   words: [
+    {
+  word: "سَر",
+  syllables: ["سَر"],
+  sounds: ["س", "َ", "ر"],
+  image: "",
+},
+{
+  word: "سَد",
+  syllables: ["سَد"],
+  sounds: ["س", "َ", "د"],
+  image: "",
+},
+{
+  word: "سَم",
+  syllables: ["سَم"],
+  sounds: ["س", "َ", "م"],
+  image: "",
+},
+{
+  word: "سَبَد",
+  syllables: ["سَ", "بَد"],
+  sounds: ["س", "َ", "ب", "َ", "د"],
+  image: "",
+},
+{
+  word: "سَرد",
+  syllables: ["سَرد"],
+  sounds: ["س", "َ", "ر", "د"],
+  image: "",
+},
+{
+  word: "اَسب",
+  syllables: ["اَسب"],
+  sounds: ["ا", "َ", "س", "ب"],
+  image: "/images/horse.png",
+},
+{
+  word: "اِسم",
+  syllables: ["اِسم"],
+  sounds: ["ا", "ِ", "س", "م"],
+  image: "",
+},
+{
+  word: "اَساس",
+  syllables: ["اَ", "ساس"],
+  sounds: ["ا", "َ", "س", "ا", "س"],
+  image: "",
+},
+{
+  word: "بَس",
+  syllables: ["بَس"],
+  sounds: ["ب", "َ", "س"],
+  image: "",
+},
+{
+  word: "مَس",
+  syllables: ["مَس"],
+  sounds: ["م", "َ", "س"],
+  image: "",
+},
+{
+  word: "رَسم",
+  syllables: ["رَسم"],
+  sounds: ["ر", "َ", "س", "م"],
+  image: "",
+},
+{
+  word: "رَسا",
+  syllables: ["رَ", "سا"],
+  sounds: ["ر", "َ", "س", "ا"],
+  image: "",
+},
+{
+  word: "دَرس",
+  syllables: ["دَرس"],
+  sounds: ["د", "َ", "ر", "س"],
+  image: "",
+},
         {
       word: "آب",
       syllables: ["آب"],

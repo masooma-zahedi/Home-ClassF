@@ -19,69 +19,144 @@ export const SylabeWords = () => {
   ];
 
   const datasets = [
-    {
-  id: 11,
-  titleHead: "کلاس F",
-  titleColor: "rgb(180, 210, 58)",
-  sylabelBg: "rgb(167, 36, 190)",
+//     {
+//   id: 11,
+//   titleHead: "کلاس 1F",
+//   titleColor: "rgb(180, 210, 58)",
+//   sylabelBg: "rgb(167, 36, 190)",
+//   sentenceRow: [
+//     [
+//       { word: "مَن", syla: "مَن" },
+//       { word: "نان", syla: "نان" },
+//       { word: "دارَم.", syla: "دا + رَم" }
+//     ],
+//     [
+//       { word: "مَن", syla: "مَن" },
+//       { word: "اَنار", syla: "اَ + نار" },
+//       { word: "دارَم.", syla: "دا + رَم" }
+//     ],
+//     [
+//       { word: "مادَر", syla: "ما + دَر" },
+//       { word: "نان", syla: "نان" },
+//       { word: "دارَد.", syla: "دا + رَد" }
+//     ],
+//     [
+//       { word: "مادَر", syla: "ما + دَر" },
+//       { word: "اَنار", syla: "اَ + نار" },
+//       { word: "دارَد.", syla: "دا + رَد" }
+//     ],
+//     [
+//       { word: "بابا", syla: "با + با" },
+//       { word: "نان", syla: "نان" },
+//       { word: "داد.", syla: "دا + د" }
+//     ],
+//     [
+//       { word: "بابا", syla: "با + با" },
+//       { word: "اَنار", syla: "اَ + نار" },
+//       { word: "دارَد.", syla: "دا + رَد" }
+//     ],
+//     [
+//       { word: "مادَر", syla: "ما + دَر" },
+//       { word: "دَر", syla: " دَر" },
+//       { word: "باران", syla: " با + ران" },
+//       { word: "آمَد.", syla: "آ + مَد" }
+//     ],
+//     [
+//       { word: "بَرادَر", syla: "بَ + را + دَر" },
+//       { word: "با", syla: "با" },
+//       { word: "مادَر", syla: "ما + دَر" },
+//       { word: "آمَد.", syla: "آ + مَد" }
+//     ],
+//     [
+//       { word: "باران", syla: "با + ران" },
+//       { word: "نَم نَم", syla: "نَم + نَم" },
+//       { word: "آمَد.", syla: "آ + مَد" }
+//     ],
+//     [
+//       { word: "اَبر", syla: "اَ + بر" },
+//       { word: "با", syla: "با" },
+//       { word: "باد", syla: "با + د" },
+//       { word: "آمَد.", syla: "آ + مَد" }
+//     ],
+
+//   ],
+// },
+{
+  id: 12,
+  titleHead: "کلاس 2F",
+  titleColor: "rgb(210, 175, 58)",
+  sylabelBg: "rgb(95, 36, 190)",
   sentenceRow: [
+
+    [
+      { word: "مَرد", syla: "مَر+د" },
+      { word: "اَسب", syla: "اَس+ب" },
+      { word: "دارَد.", syla: "دا + رَد" }
+    ],
+    [
+      { word: "نان", syla: "نا+ن" },
+      { word: "سَرد", syla: "سَر+د" },
+      { word: "اَست.", syla: "اَس+ت" }
+    ],
     [
       { word: "مَن", syla: "مَن" },
-      { word: "نان", syla: "نان" },
+      { word: "سَبد", syla: "سَ + بَد" },
       { word: "دارَم.", syla: "دا + رَم" }
     ],
     [
       { word: "مَن", syla: "مَن" },
-      { word: "اَنار", syla: "اَ + نار" },
+      { word: "دَرس", syla: "دَر+س" },
       { word: "دارَم.", syla: "دا + رَم" }
     ],
     [
       { word: "مادَر", syla: "ما + دَر" },
-      { word: "نان", syla: "نان" },
+      { word: "دَرس", syla: "دَر+س" },
       { word: "دارَد.", syla: "دا + رَد" }
-    ],
-    [
-      { word: "مادَر", syla: "ما + دَر" },
-      { word: "اَنار", syla: "اَ + نار" },
-      { word: "دارَد.", syla: "دا + رَد" }
-    ],
-    [
-      { word: "بابا", syla: "با + با" },
-      { word: "نان", syla: "نان" },
-      { word: "داد.", syla: "دا + د" }
-    ],
-    [
-      { word: "بابا", syla: "با + با" },
-      { word: "اَنار", syla: "اَ + نار" },
-      { word: "دارَد.", syla: "دا + رَد" }
-    ],
-    [
-      { word: "مادَر", syla: "ما + دَر" },
-      { word: "دَر", syla: " دَر" },
-      { word: "باران", syla: " با + ران" },
-      { word: "آمَد.", syla: "آ + مَد" }
     ],
     [
       { word: "بَرادَر", syla: "بَ + را + دَر" },
-      { word: "با", syla: "با" },
-      { word: "مادَر", syla: "ما + دَر" },
-      { word: "آمَد.", syla: "آ + مَد" }
+      { word: "دَرس", syla: "دَر+س" },
+      { word: "دارَد.", syla: "دا + رَد" }
     ],
     [
-      { word: "باران", syla: "با + ران" },
-      { word: "نَم نَم", syla: "نَم + نَم" },
-      { word: "آمَد.", syla: "آ + مَد" }
+      { word: "مَرد", syla: "مَر+د" },
+      { word: "دَربان", syla: "دَر + بان" },
+      { word: "اَست.", syla: "اَس+ت" }
     ],
     [
-      { word: "اَبر", syla: "اَ + بر" },
-      { word: "با", syla: "با" },
-      { word: "باد", syla: "با + د" },
-      { word: "آمَد.", syla: "آ + مَد" }
+      { word: "مَن", syla: "مَن" },
+      { word: "دَندان", syla: "دَن + دان" },
+      { word: "دارَم.", syla: "دا + رَم" }
     ],
-
+    [
+      { word: "دَندانِ", syla: "دَن + دا + نِ" },
+      { word: "مَن", syla: "مَن" },
+      { word: "دَرد", syla: "دَرد" },
+      { word: "دارَد.", syla: "دا + رَد" }
+    ],
+    [
+      { word: "مَرد", syla: "مَرد" },
+      { word: "اَمان", syla: "اَ + مان" },
+      { word: "داد.", syla: "داد" }
+    ],
+    [
+      { word: "مَن", syla: "مَن" },
+      { word: "بَرادَر", syla: "بَ + را + دَر" },
+      { word: "دارَم.", syla: "دا + رَم" }
+    ],
+    [
+      { word: "مَرد", syla: "مَرد" },
+      { word: "اَسب", syla: "اَ + سب" },
+      { word: "را", syla: "را" },
+      { word: "بُرد.", syla: "بُرد" }
+    ],
+    [
+      { word: "مَن", syla: "مَن" },
+      { word: "سَردَم", syla: "سَر + دَم" },
+      { word: "اَست.", syla: "اَست" }
+    ],
   ],
 },
-
   ];
 
   const currentDataset = datasets.find((ds) => ds.id === selectedDatasetId) || datasets[0];
@@ -203,7 +278,7 @@ export const SylabeWords = () => {
 
       <div className="row g-4 mt-3">
         {/* Left: sentences - occupies full width on mobile */}
-        <div className="col-md-7">
+        <div className="col-md-5">
           <h2
             className="text-center text-light py-3 rounded-3 shadow"
             style={{ backgroundColor: currentDataset.titleColor || "#6c5ce7" }}
@@ -248,7 +323,7 @@ export const SylabeWords = () => {
         </div>
 
         {/* Right: desktop sticky display */}
-        <div className="col-md-5 desktop-right">
+        <div className="col-md-7 desktop-right">
           <div
             className="d-flex flex-column justify-content-center align-items-center shadow-lg rounded-4 p-4"
             style={{

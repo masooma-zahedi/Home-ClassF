@@ -23,9 +23,9 @@ import BalloonGame from "./BalloonGame";
 
 export default function Home() {
   return (<>
-  <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}> با بچه ها جملات زیر را تمرین کنید.</h4>
+  {/* <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}> با بچه ها جملات زیر را تمرین کنید.</h4> */}
       <div className="container text-center my-4">
-      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 5 جمله زیر بنویسند</div>
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها:بازی را انجام واز روی کلمات آن بنویسند</div>
       {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
 {/* <BalloonGame words={["بابا", "ناب", "بار", "باد", "بام", "باران", "بَد", "بَم", "بَر", "بُرد", "دار", "داد", "دَر", "دُر", "مادَر", "دارَم", "دارَد","مامان", "نام", "نان", "مَن", "نَم", "مار", "رَم", "نَرم"]} rounds={20}/>     */}
@@ -34,7 +34,8 @@ export default function Home() {
       {/* <TypingImageText/> */}
       {/* <WordFlipBox/> */}
       {/* <SentenceBuilder/> */}
-        <SylabeWords/>
+      <BalloonGame/>
+        {/* <SylabeWords/> */}
       {/* <VideoCard
         title="قصه کوتاه امروز"
         description="متن فارسی داستان زیر را بخوانید."
@@ -66,7 +67,7 @@ export default function Home() {
       <img src={`${process.env.PUBLIC_URL}/images/homework/jjjj.png`} className="w-100" alt="" />
     </div> */}
     <div className="container text-center my-4">
-      <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 15 کلمه اول هر کدام یک بار بنویسند</div>
+      {/* <div className="bg-info h5 p-4"> کارخانگی بچه ها: از روی 15 کلمه اول هر کدام یک بار بنویسند</div> */}
       {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
     <div className="container text-center my-5">
@@ -74,7 +75,7 @@ export default function Home() {
         <WordHouseGame/>
     </div>
 
-    <MatchGame/>
+    {/* <MatchGame/> */}
 
 
     {/* <DragDropQuiz/> */}
