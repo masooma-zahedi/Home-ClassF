@@ -1,99 +1,99 @@
 import React, { useEffect, useState } from 'react';
 
 
-// const questions1 = [
-//   {
-//     image: 'https://thumbs.dreamstime.com/b/pencil-character-facial-expressions-19965263.jpg',
-//     correct: '.این یِک مِداد اَست',
-//     options: ['.این یِک کِتاب اَست', '.این یِک صَندَلی اَست', '.این یِک مِداد اَست'],
-//     word: 'مِداد',
-//     meaning: 'pencil'
-//   },
-//   {
-//     image: 'https://i.graphicmama.com/uploads/2019/3/5c9256275ee59-Cute%20Book%20Cartoon%20Vector%20Character.png',
-//     correct: '.مَن کِتاب دارَم',
-//     options: ['.مَن مِداد دارَم', '.مَن کِتاب دارَم', '.او صَندَلی دارَد'],
-//     word: 'کِتاب',
-//     meaning: 'book'
-//   },
-//   {
-//     image: 'https://s3.envato.com/files/295931587/preview1.jpg',
-//     correct: '.او کیف دارَد',
-//     options: ['.او دَفتَر دارَد', '.او کیف دارَد', '.او صَندَلی دارَد'],
-//     word: 'کیف',
-//     meaning: 'bag'
-//   },
-//   {
-//     image: 'https://www.shutterstock.com/image-vector/illustration-timer-clock-design-hand-260nw-2328107837.jpg',
-//     correct: 'حالا نوبَتِ توست.',
-//     options: ['حالا نوبَتِ توست.', 'حالا نوبَتِ مَن اَست.', 'حالا نوبَت آنها اَست.'],
-//     word: 'نوبَت',
-//     meaning: 'turn'
-//   },
-//   {
-//     image: 'https://img.freepik.com/premium-vector/school-age-boy-looking-moon-flat-style-vector-illustration_1332465-15978.jpg',
-//     correct: 'بَچِه بِه ماه نِگاه کَرد',
-//     options: ['بَچِه بِه جَنگَل نِگاه کَرد', 'بَچه بِه دَریا نِگاه کَرد', 'بَچِه بِه ماه نِگاه کَرد'],
-//     word: 'ماه',
-//     meaning: 'moon'
-//   },
-//   {
-//     image: 'https://static.vecteezy.com/system/resources/previews/030/688/870/non_2x/juice-2d-cartoon-vector-illustration-on-white-background-h-free-photo.jpg',
-//     correct: 'مَن آبمیوِه دوست دارَم',
-//     options: ['مَن پیتزا دوست دارَم', 'مَن آبمیوِه دوست دارَم', 'مَن نانِ تازِه دوست دارَم'],
-//     word: 'آبمیوِه',
-//     meaning: 'juice'
-//   },
-//   {
-//     image: 'https://previews.123rf.com/images/microone/microone2208/microone220800180/190481157-students-in-classroom-student-behaviour-pupils-sitting-at-desks-on-lesson-school-college-children.jpg',
-//     correct: 'کِلاس شِش نَفَر شاگِرد دارَد',
-//     options: ['کِلاس شِش نَفَر شاگِرد دارَد', 'ما دَر وَرزِشگاه وَرزِش می کُنیم', 'مادَر در فُروشگاه است'],
-//     word: 'کِلاس',
-//     meaning: 'classroom'
-//   },
-//   {
-//     image: 'https://thumbs.dreamstime.com/b/cartoon-shoes-icon-19180433.jpg',
-//     correct: 'مَن کَفشِ نو خَریدَم',
-//     options: ['مَن یِک آیپَد خَریدَم', 'مَن کَفشِ نو خَریدَم', 'مَن چَند دَفتَر خَریدَم'],
-//     word: 'کَفش',
-//     meaning: 'shoes'
-//   },
-//   {
-//     image: 'https://thumbs.dreamstime.com/b/baby-crying-next-to-worried-mother-vector-illustration-newborn-tears-desperate-new-mom-trying-calm-him-down-147979328.jpg',
-//     correct: 'مادَر نِگُران بَرادَرم بود',
-//     options: ['مادر با بَرادَر خندید', 'مادَر برای بَرادَرم خوراکی خَرید', 'مادَر نِگُران بَرادَرم بود'],
-//     word: 'نِگُران',
-//     meaning: 'worried'
-//   },
-//   {
-//     image: 'https://www.shutterstock.com/image-vector/vector-illustration-happy-children-playing-600nw-1099688924.jpg',
-//     correct: 'خانِه ما نَزدیک پارک اَست',
-//     options: ['خانِه ما نَزدیک پارک اَست', 'خانِه ما اَز کِتابخانِه دور اَست', 'خانِه ما به مَکتَب نَزدیک اَست'],
-//     word: 'پارک',
-//     meaning: 'park'
-//   },
-//   {
-//     image: 'https://ik.imagekit.io/storybird/images/d553bf69-ddfe-4d2c-b683-e7ddde9acced/1_79727818.webp?tr=q-80',
-//     correct: 'آتَش نِشان کودَک را نِجات داد',
-//     options: ['رانَنده کودَکان را به مَکتَب بُرد', 'دُکتر کودَک را جَراحی کَرد', 'آتَش نِشان کودَک را نِجات داد'],
-//     word: 'آتَش‌نِشان',
-//     meaning: 'firefighter'
-//   },
-//   {
-//     image: 'https://t3.ftcdn.net/jpg/13/23/10/74/360_F_1323107457_M22cjnt1yOTcDkMgzONR7Te37HyRdTGg.jpg',
-//     correct: 'این اَنگُشتَر اَز طَلا اَست',
-//     options: ['این اَنگُشتَر اَز طَلا اَست', 'این گوشوارِه اَست', 'این یِک اَلَنگو اَست'],
-//     word: 'اَنگُشتَر',
-//     meaning: 'ring'
-//   },
-//   {
-//     image: 'https://icon2.cleanpng.com/ci3/uvn/sbz/ad84tyi8n.webp',
-//     correct: 'او اَز نَردِبان بالا رَفت',
-//     options: ['اَمین اَز دِرَخت بالا رَفت', 'مَن از کوه بالا رَفتَم', 'او اَز نَردِبان بالا رَفت'],
-//     word: 'نَردِبان',
-//     meaning: 'ladder'
-//   },
-// ]
+const questions1 = [
+  {
+    image: 'https://thumbs.dreamstime.com/b/pencil-character-facial-expressions-19965263.jpg',
+    correct: '.این یِک مِداد اَست',
+    options: ['.این یِک کِتاب اَست', '.این یِک صَندَلی اَست', '.این یِک مِداد اَست'],
+    word: 'مِداد',
+    meaning: 'pencil'
+  },
+  {
+    image: 'https://i.graphicmama.com/uploads/2019/3/5c9256275ee59-Cute%20Book%20Cartoon%20Vector%20Character.png',
+    correct: '.مَن کِتاب دارَم',
+    options: ['.مَن مِداد دارَم', '.مَن کِتاب دارَم', '.او صَندَلی دارَد'],
+    word: 'کِتاب',
+    meaning: 'book'
+  },
+  {
+    image: 'https://s3.envato.com/files/295931587/preview1.jpg',
+    correct: '.او کیف دارَد',
+    options: ['.او دَفتَر دارَد', '.او کیف دارَد', '.او صَندَلی دارَد'],
+    word: 'کیف',
+    meaning: 'bag'
+  },
+  {
+    image: 'https://www.shutterstock.com/image-vector/illustration-timer-clock-design-hand-260nw-2328107837.jpg',
+    correct: 'حالا نوبَتِ توست.',
+    options: ['حالا نوبَتِ توست.', 'حالا نوبَتِ مَن اَست.', 'حالا نوبَت آنها اَست.'],
+    word: 'نوبَت',
+    meaning: 'turn'
+  },
+  {
+    image: 'https://img.freepik.com/premium-vector/school-age-boy-looking-moon-flat-style-vector-illustration_1332465-15978.jpg',
+    correct: 'بَچِه بِه ماه نِگاه کَرد',
+    options: ['بَچِه بِه جَنگَل نِگاه کَرد', 'بَچه بِه دَریا نِگاه کَرد', 'بَچِه بِه ماه نِگاه کَرد'],
+    word: 'ماه',
+    meaning: 'moon'
+  },
+  {
+    image: 'https://static.vecteezy.com/system/resources/previews/030/688/870/non_2x/juice-2d-cartoon-vector-illustration-on-white-background-h-free-photo.jpg',
+    correct: 'مَن آبمیوِه دوست دارَم',
+    options: ['مَن پیتزا دوست دارَم', 'مَن آبمیوِه دوست دارَم', 'مَن نانِ تازِه دوست دارَم'],
+    word: 'آبمیوِه',
+    meaning: 'juice'
+  },
+  {
+    image: 'https://previews.123rf.com/images/microone/microone2208/microone220800180/190481157-students-in-classroom-student-behaviour-pupils-sitting-at-desks-on-lesson-school-college-children.jpg',
+    correct: 'کِلاس شِش نَفَر شاگِرد دارَد',
+    options: ['کِلاس شِش نَفَر شاگِرد دارَد', 'ما دَر وَرزِشگاه وَرزِش می کُنیم', 'مادَر در فُروشگاه است'],
+    word: 'کِلاس',
+    meaning: 'classroom'
+  },
+  {
+    image: 'https://thumbs.dreamstime.com/b/cartoon-shoes-icon-19180433.jpg',
+    correct: 'مَن کَفشِ نو خَریدَم',
+    options: ['مَن یِک آیپَد خَریدَم', 'مَن کَفشِ نو خَریدَم', 'مَن چَند دَفتَر خَریدَم'],
+    word: 'کَفش',
+    meaning: 'shoes'
+  },
+  {
+    image: 'https://thumbs.dreamstime.com/b/baby-crying-next-to-worried-mother-vector-illustration-newborn-tears-desperate-new-mom-trying-calm-him-down-147979328.jpg',
+    correct: 'مادَر نِگُران بَرادَرم بود',
+    options: ['مادر با بَرادَر خندید', 'مادَر برای بَرادَرم خوراکی خَرید', 'مادَر نِگُران بَرادَرم بود'],
+    word: 'نِگُران',
+    meaning: 'worried'
+  },
+  {
+    image: 'https://www.shutterstock.com/image-vector/vector-illustration-happy-children-playing-600nw-1099688924.jpg',
+    correct: 'خانِه ما نَزدیک پارک اَست',
+    options: ['خانِه ما نَزدیک پارک اَست', 'خانِه ما اَز کِتابخانِه دور اَست', 'خانِه ما به مَکتَب نَزدیک اَست'],
+    word: 'پارک',
+    meaning: 'park'
+  },
+  {
+    image: 'https://ik.imagekit.io/storybird/images/d553bf69-ddfe-4d2c-b683-e7ddde9acced/1_79727818.webp?tr=q-80',
+    correct: 'آتَش نِشان کودَک را نِجات داد',
+    options: ['رانَنده کودَکان را به مَکتَب بُرد', 'دُکتر کودَک را جَراحی کَرد', 'آتَش نِشان کودَک را نِجات داد'],
+    word: 'آتَش‌نِشان',
+    meaning: 'firefighter'
+  },
+  {
+    image: 'https://t3.ftcdn.net/jpg/13/23/10/74/360_F_1323107457_M22cjnt1yOTcDkMgzONR7Te37HyRdTGg.jpg',
+    correct: 'این اَنگُشتَر اَز طَلا اَست',
+    options: ['این اَنگُشتَر اَز طَلا اَست', 'این گوشوارِه اَست', 'این یِک اَلَنگو اَست'],
+    word: 'اَنگُشتَر',
+    meaning: 'ring'
+  },
+  {
+    image: 'https://icon2.cleanpng.com/ci3/uvn/sbz/ad84tyi8n.webp',
+    correct: 'او اَز نَردِبان بالا رَفت',
+    options: ['اَمین اَز دِرَخت بالا رَفت', 'مَن از کوه بالا رَفتَم', 'او اَز نَردِبان بالا رَفت'],
+    word: 'نَردِبان',
+    meaning: 'ladder'
+  },
+]
 // const action1 =[
 //   {
 //     image: 'https://thumbs.dreamstime.com/b/illustration-cute-little-boy-eating-red-apple-isolated-white-background-kid-eats-red-apple-good-appetite-healthy-331433166.jpg',
@@ -277,113 +277,113 @@ import React, { useEffect, useState } from 'react';
 // ];
 
 
-const illnessSignsQuestions = [
-  {
-    image: 'https://media.istockphoto.com/id/598785430/vector/sick-girl-in-bed.jpg?s=612x612&w=0&k=20&c=sp_1S46NAWTwVYfiln8cv6sKc-PJNT-HR54GNeryy5Q=',
-    correct: '.او تَب دارَد',
-    options: ['.او تَب دارَد', '.او می‌خَندَد', '.او گُرُسنه اَست'],
-    word: 'تَب',
-    meaning: 'Fever '
-  },
-  {
-    image: 'https://www.shutterstock.com/image-vector/boys-people-suffering-various-symptoms-260nw-1658168074.jpg',
-    correct: '.او سُرفه می‌کُنَد',
-    options: ['.او می‌دَوَد', '.او سُرفه می‌کُنَد', '.او بازی می‌کُنَد'],
-    word: 'سُرفه',
-    meaning: 'Cough '
-  },
-  {
-    image: 'https://clipart-library.com/images/pi76rXxi9.jpg',
-    correct: '.او حالِ خوبی نَدارَد',
-    options: ['.او حالِ خوبی دارَد', '.او خوشحال اَست', '.او حالِ خوبی نَدارَد'],
-    word: 'حالِ بد',
-    meaning: 'Feeling unwell or sick'
-  },
-  {
-    image: 'https://www.shutterstock.com/image-vector/child-has-got-flu-sneezing-600nw-216852040.jpg',
-    correct: '.او عَطسِه می‌کُنَد',
-    options: ['.او عَطسِه می‌کُنَد', '.او آواز می‌خوانَد', '.او می‌خوابَد'],
-    word: 'عَطسِه',
-    meaning: 'Sneezing '
-  },
-  {
-    image: 'https://img.freepik.com/free-vector/hand-drawn-headache-cartoon-illustration_23-2150696197.jpg',
-    correct: '.او سَردَرد دارَد',
-    options: ['.او سَردَرد دارَد', '.او دَست‌ دَرد دارَد', '.او خوشحال اَست'],
-    word: 'سَردَرد',
-    meaning: 'Headache'
-  },
-  {
-    image: 'https://c8.alamy.com/comp/2B7XEMH/a-child-is-showing-symptoms-of-a-sore-throat-or-covid-19-hand-drawn-vector-illustration-2B7XEMH.jpg',
-    correct: '.او گَلودَرد دارَد',
-    options: ['.او پا دَرد دارَد', '.او خوابیده اَست', '.او گَلودَرد دارَد'],
-    word: 'گَلودَرد',
-    meaning: 'Sore throat'
-  },
-  {
-    image: 'https://www.shutterstock.com/image-vector/vector-illustration-little-boy-suffering-600nw-1582302751.jpg',
-    correct: '.او شِکم‌دَرد دارَد',
-    options: ['.او دَست دَرد دارَد', '.او شِکم‌دَرد دارَد', '.او دَندان دَرد دارَد'],
-    word: 'شِکم‌دَرد',
-    meaning: 'Stomachache '
-  },
-  {
-    image: 'https://previews.123rf.com/images/colorfuelstudio/colorfuelstudio2104/colorfuelstudio210400194/167735574-young-good-looking-woman-feeling-tired-and-sick.jpg',
-    correct: '.او خَستِه اَست',
-    options: ['.او بیدار اَست', '.او تَب دارَد', '.او خَستِه اَست'],
-    word: 'خَستِه',
-    meaning: 'Tired '
-  },
-  {
-    image: 'https://previews.123rf.com/images/ruangdesign19/ruangdesign191909/ruangdesign19190900013/129710506-cartoon-child-toothache-vector-illustration.jpg',
-    correct: '.او دَندان‌دَرد دارَد',
-    options: ['.او دَندان‌دَرد دارَد', '.او گوش‌ دَرد دارَد', '.او خوابَش می‌آیَد'],
-    word: 'دَندان‌دَرد',
-    meaning: 'Toothache'
-  },
-  {
-    image: 'https://www.shutterstock.com/image-vector/earache-sore-boy-sick-person-600nw-1671298501.jpg',
-    correct: '.او گوش‌دَرد دارَد',
-    options: ['.او گوش‌دَرد دارَد', '.او شِکم‌دَرد دارَد', '.او حالِ خوب دارَد'],
-    word: 'گوش‌دَرد',
-    meaning: 'Earache '
-  },
-  {
-    image: 'https://media.istockphoto.com/id/1423379495/vector/girl-sweating-sunny-day-cute-child.jpg?s=612x612&w=0&k=20&c=FU0s8UF13Ms0UaOVXG5RUr3iWukOirvKnhdf1SZ7Xss=',
-    correct: '.او عَرَق می‌کُنَد',
-    options: ['.او لَبخَند می‌زَنَد', '.او عَرَق می‌کُنَد', '.او دَر راه اَست'],
-    word: 'عَرَق',
-    meaning: 'Sweat '
-  },
-  {
-    image: 'https://png.pngtree.com/png-clipart/20250210/original/pngtree-a-runny-nose-for-a-child-png-image_20412369.png',
-    correct: '.بینیِ او گِرفتِه اَست',
-    options: ['.او بینی نَدارَد', '.او دَندان دَرد دارَد', '.بینیِ او گِرفتِه اَست'],
-    word: 'گرفتگی بینی',
-    meaning: 'Nasal congestion'
-  },
-  {
-    image: 'https://www.shutterstock.com/image-vector/little-kid-feel-tired-low-260nw-2524893147.jpg',
-    correct: '.او نیرویی نَدارَد',
-    options: ['.او دَرس می‌خوانَد', '.او نیرویی نَدارَد', '.او تَشنه اَست'],
-    word: 'بی‌نیرویی',
-    meaning: 'Fatigue'
-  },
-  {
-    image: 'https://t.pimg.jp/084/974/769/1/84974769.jpg',
-    correct: '.او روی تَخت دراز کِشیدِه اَست',
-    options: ['.او روی تَخت دراز کِشیدِه اَست', '.او بازی می‌کُنَد', '.او می‌دَوَد'],
-    word: 'دراز کشیدن',
-    meaning: 'Lying down '
-  },
-  {
-    image: 'https://cdn.motherhood.com.my/wp-content/uploads/2022/04/14190652/child-eat-medicine.png',
-    correct: '.او دارو می‌خورَد',
-    options: ['.او میوه می‌خورَد', '.او آب می‌خورَد', '.او دارو می‌خورَد'],
-    word: 'دارو',
-    meaning: 'Medicine'
-  }
-];
+// const illnessSignsQuestions = [
+//   {
+//     image: 'https://media.istockphoto.com/id/598785430/vector/sick-girl-in-bed.jpg?s=612x612&w=0&k=20&c=sp_1S46NAWTwVYfiln8cv6sKc-PJNT-HR54GNeryy5Q=',
+//     correct: '.او تَب دارَد',
+//     options: ['.او تَب دارَد', '.او می‌خَندَد', '.او گُرُسنه اَست'],
+//     word: 'تَب',
+//     meaning: 'Fever '
+//   },
+//   {
+//     image: 'https://www.shutterstock.com/image-vector/boys-people-suffering-various-symptoms-260nw-1658168074.jpg',
+//     correct: '.او سُرفه می‌کُنَد',
+//     options: ['.او می‌دَوَد', '.او سُرفه می‌کُنَد', '.او بازی می‌کُنَد'],
+//     word: 'سُرفه',
+//     meaning: 'Cough '
+//   },
+//   {
+//     image: 'https://clipart-library.com/images/pi76rXxi9.jpg',
+//     correct: '.او حالِ خوبی نَدارَد',
+//     options: ['.او حالِ خوبی دارَد', '.او خوشحال اَست', '.او حالِ خوبی نَدارَد'],
+//     word: 'حالِ بد',
+//     meaning: 'Feeling unwell or sick'
+//   },
+//   {
+//     image: 'https://www.shutterstock.com/image-vector/child-has-got-flu-sneezing-600nw-216852040.jpg',
+//     correct: '.او عَطسِه می‌کُنَد',
+//     options: ['.او عَطسِه می‌کُنَد', '.او آواز می‌خوانَد', '.او می‌خوابَد'],
+//     word: 'عَطسِه',
+//     meaning: 'Sneezing '
+//   },
+//   {
+//     image: 'https://img.freepik.com/free-vector/hand-drawn-headache-cartoon-illustration_23-2150696197.jpg',
+//     correct: '.او سَردَرد دارَد',
+//     options: ['.او سَردَرد دارَد', '.او دَست‌ دَرد دارَد', '.او خوشحال اَست'],
+//     word: 'سَردَرد',
+//     meaning: 'Headache'
+//   },
+//   {
+//     image: 'https://c8.alamy.com/comp/2B7XEMH/a-child-is-showing-symptoms-of-a-sore-throat-or-covid-19-hand-drawn-vector-illustration-2B7XEMH.jpg',
+//     correct: '.او گَلودَرد دارَد',
+//     options: ['.او پا دَرد دارَد', '.او خوابیده اَست', '.او گَلودَرد دارَد'],
+//     word: 'گَلودَرد',
+//     meaning: 'Sore throat'
+//   },
+//   {
+//     image: 'https://www.shutterstock.com/image-vector/vector-illustration-little-boy-suffering-600nw-1582302751.jpg',
+//     correct: '.او شِکم‌دَرد دارَد',
+//     options: ['.او دَست دَرد دارَد', '.او شِکم‌دَرد دارَد', '.او دَندان دَرد دارَد'],
+//     word: 'شِکم‌دَرد',
+//     meaning: 'Stomachache '
+//   },
+//   {
+//     image: 'https://previews.123rf.com/images/colorfuelstudio/colorfuelstudio2104/colorfuelstudio210400194/167735574-young-good-looking-woman-feeling-tired-and-sick.jpg',
+//     correct: '.او خَستِه اَست',
+//     options: ['.او بیدار اَست', '.او تَب دارَد', '.او خَستِه اَست'],
+//     word: 'خَستِه',
+//     meaning: 'Tired '
+//   },
+//   {
+//     image: 'https://previews.123rf.com/images/ruangdesign19/ruangdesign191909/ruangdesign19190900013/129710506-cartoon-child-toothache-vector-illustration.jpg',
+//     correct: '.او دَندان‌دَرد دارَد',
+//     options: ['.او دَندان‌دَرد دارَد', '.او گوش‌ دَرد دارَد', '.او خوابَش می‌آیَد'],
+//     word: 'دَندان‌دَرد',
+//     meaning: 'Toothache'
+//   },
+//   {
+//     image: 'https://www.shutterstock.com/image-vector/earache-sore-boy-sick-person-600nw-1671298501.jpg',
+//     correct: '.او گوش‌دَرد دارَد',
+//     options: ['.او گوش‌دَرد دارَد', '.او شِکم‌دَرد دارَد', '.او حالِ خوب دارَد'],
+//     word: 'گوش‌دَرد',
+//     meaning: 'Earache '
+//   },
+//   {
+//     image: 'https://media.istockphoto.com/id/1423379495/vector/girl-sweating-sunny-day-cute-child.jpg?s=612x612&w=0&k=20&c=FU0s8UF13Ms0UaOVXG5RUr3iWukOirvKnhdf1SZ7Xss=',
+//     correct: '.او عَرَق می‌کُنَد',
+//     options: ['.او لَبخَند می‌زَنَد', '.او عَرَق می‌کُنَد', '.او دَر راه اَست'],
+//     word: 'عَرَق',
+//     meaning: 'Sweat '
+//   },
+//   {
+//     image: 'https://png.pngtree.com/png-clipart/20250210/original/pngtree-a-runny-nose-for-a-child-png-image_20412369.png',
+//     correct: '.بینیِ او گِرفتِه اَست',
+//     options: ['.او بینی نَدارَد', '.او دَندان دَرد دارَد', '.بینیِ او گِرفتِه اَست'],
+//     word: 'گرفتگی بینی',
+//     meaning: 'Nasal congestion'
+//   },
+//   {
+//     image: 'https://www.shutterstock.com/image-vector/little-kid-feel-tired-low-260nw-2524893147.jpg',
+//     correct: '.او نیرویی نَدارَد',
+//     options: ['.او دَرس می‌خوانَد', '.او نیرویی نَدارَد', '.او تَشنه اَست'],
+//     word: 'بی‌نیرویی',
+//     meaning: 'Fatigue'
+//   },
+//   {
+//     image: 'https://t.pimg.jp/084/974/769/1/84974769.jpg',
+//     correct: '.او روی تَخت دراز کِشیدِه اَست',
+//     options: ['.او روی تَخت دراز کِشیدِه اَست', '.او بازی می‌کُنَد', '.او می‌دَوَد'],
+//     word: 'دراز کشیدن',
+//     meaning: 'Lying down '
+//   },
+//   {
+//     image: 'https://cdn.motherhood.com.my/wp-content/uploads/2022/04/14190652/child-eat-medicine.png',
+//     correct: '.او دارو می‌خورَد',
+//     options: ['.او میوه می‌خورَد', '.او آب می‌خورَد', '.او دارو می‌خورَد'],
+//     word: 'دارو',
+//     meaning: 'Medicine'
+//   }
+// ];
 // const pantry = [
 //   {
 //     image: 'https://c8.alamy.com/comp/FTRH8J/freehand-drawn-cartoon-sugar-bowl-FTRH8J.jpg',
@@ -501,8 +501,8 @@ const ObjectSentenceGame = () => {
   const [selected, setSelected] = useState("");
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
-  const [questions, setQuestions] = useState(illnessSignsQuestions);
-  const [idModal, setIdModal] = useState("illnessSignsQuestions");
+  const [questions, setQuestions] = useState(questions1);
+  const [idModal, setIdModal] = useState("questions1");
   const [showMeaning, setShowMeaning] = useState(false);
 
   const handleAnswer = (option) => {
@@ -589,13 +589,13 @@ const ObjectSentenceGame = () => {
               </div>
               <div className="modal-body">
                 <div className="d-flex flex-wrap">
-                  {/* <button
+                  <button
                     className="btn shadow-sm border mx-2 fw-bold"
                     style={stylebg}
                     onClick={() => questionsqq(questions1, "question1")}
                   >
                     🎯 اشیا 
-                  </button> */}
+                  </button>
                   {/* <button
                     className="btn shadow-sm border mx-2 fw-bold"
                     style={stylebg}
@@ -617,13 +617,13 @@ const ObjectSentenceGame = () => {
                   >
                     🎯 بیماری ها
                   </button> */}
-                  <button
+                  {/* <button
                     className="btn shadow-sm border mx-2 fw-bold"
                     style={stylebg}
                     onClick={() => questionsqq(illnessSignsQuestions, "question4")}
                   >
                     🎯انبار آشپرخانه
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <div className="modal-footer">

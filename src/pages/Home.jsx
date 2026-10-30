@@ -25,17 +25,17 @@ export default function Home() {
   return (<>
   {/* <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}> با بچه ها جملات زیر را تمرین کنید.</h4> */}
       <div className="container text-center my-4">
-      <div className="bg-info h5 p-4"> کارخانگی بچه ها:بازی را انجام واز روی کلمات آن بنویسند</div>
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها:جملات زیر را بخوانند و از روی 5 جمله آن بنویسند</div>
       {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
 {/* <BalloonGame words={["بابا", "ناب", "بار", "باد", "بام", "باران", "بَد", "بَم", "بَر", "بُرد", "دار", "داد", "دَر", "دُر", "مادَر", "دارَم", "دارَد","مامان", "نام", "نان", "مَن", "نَم", "مار", "رَم", "نَرم"]} rounds={20}/>     */}
-      {/* <ObjectSentenceGame/> */}
+        <SylabeWords/>
+      <ObjectSentenceGame/>
       {/* <SentenceObjecحروفt/> */}
       {/* <TypingImageText/> */}
       {/* <WordFlipBox/> */}
       {/* <SentenceBuilder/> */}
-      <BalloonGame/>
-        {/* <SylabeWords/> */}
+      {/* <BalloonGame/> */}
       {/* <VideoCard
         title="قصه کوتاه امروز"
         description="متن فارسی داستان زیر را بخوانید."
