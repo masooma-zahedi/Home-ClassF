@@ -4,7 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function BouncingBalls() {
   // ✅ دسته‌های مختلف
   const categories = {
-"click to start":["مامان","نام","نان","مَن","نَم","مار","نَر","رَم","نَرم"],
+    // "click to start":["سَبَد","سَرباز","سَبز","بَست","سیراب","بَسی","سِپاس","بَسیج","سِز","ساز","سُرب","سُرخ","سِپَر","سَر","اَست","سیر","سَبا","سیری","سیب","سوز",],
+    // "click to start":["جِت","جو","جیب","جور","جوراب","جِلو","جُدا","جِرم","جَدید","جِسم","جُک"]
+    "click to start": ["تَن", "تَب", "تَر", "تَند", "تَرس", "تَبَر", "تَست", "دَست", "دَستَم", "دَستَت", "بَست", "بَستَن", "بَستَم","مَست",],
   };
 
   const colors = ["#ff6b6b", "#6bcfff", "#ffd93d", "#6bff95", "#c86bff", "#ff9f40"];
@@ -132,7 +134,7 @@ export default function BouncingBalls() {
         {Array.from({ length: 5 }).map((_, index) => {
           const randomSize = 60 + Math.floor(Math.random() * 50);
 
-          return (
+          return (<>
             <div
               key={index}
               onClick={() => handleClick(index)}
@@ -146,12 +148,14 @@ export default function BouncingBalls() {
                 
               }}
             >
-              {usedWords[index] ? (
+              {usedWords[index] ? (<>
                 <span className="word">
                   {gameOver ? "پایان 🎉" : usedWords[index]}
                 </span>
-              ) : null}
+                </>
+              ) :<img id="frogy" className="w-100 h-100" src="https://png.pngtree.com/png-clipart/20240316/original/pngtree-cute-frog-png-png-image_14598301.png" alt="" />}
             </div>
+            </>
           );
         })}
       </div>

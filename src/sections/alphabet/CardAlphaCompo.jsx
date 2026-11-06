@@ -35,17 +35,17 @@ export let infoCard = [
     //     longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/06-10-24-پ-long.jpg`,
     //     longSoundId:"kj"
     // },
-    // {
-    //     mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/ت-03-10-1.jpg`,
-    //     title:"حرف ت ",
-    //     picFinger:`https://png.pngtree.com/png-vector/20241123/ourmid/pngtree-a-cute-cartoon-egg-png-image_14551272.png`,
-    //     examplePic:[`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ت-1.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ت-2.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ت-3.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ت-4.png`],
-    //     examplePicId:"examT1ت",
-    //     shortSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/03-10-ت-4.jpg`,
-    //     shortSoundId:"shortT1",
-    //     longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/ت-long-1.jpg`,
-    //     longSoundId:"longT1"
-    // },
+    {
+        mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/ت-03-10-1.jpg`,
+        title:"حرف ت ",
+        picFinger:`https://png.pngtree.com/png-vector/20241123/ourmid/pngtree-a-cute-cartoon-egg-png-image_14551272.png`,
+        examplePic:[`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ت-1.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ت-2.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ت-3.png`,`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/exampleAlpha/08-10-ت-4.png`],
+        examplePicId:"examT1ت",
+        shortSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/03-10-ت-4.jpg`,
+        shortSoundId:"shortT1",
+        longSoundPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/ت-long-1.jpg`,
+        longSoundId:"longT1"
+    },
     // {
     //     mainPic:`${process.env.PUBLIC_URL}/images/assetAlpha/cardAlpha/ث-03-10-1.jpg`,
     //     title:"حرف ث",
