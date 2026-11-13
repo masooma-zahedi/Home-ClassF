@@ -29,6 +29,7 @@ export default function Home() {
       {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
 {/* <BalloonGame words={["بابا", "ناب", "بار", "باد", "بام", "باران", "بَد", "بَم", "بَر", "بُرد", "دار", "داد", "دَر", "دُر", "مادَر", "دارَم", "دارَد","مامان", "نام", "نان", "مَن", "نَم", "مار", "رَم", "نَرم"]} rounds={20}/>     */}
+    <BrokenGlass/>
         <SylabeWords/>
       {/* <ObjectSentenceGame/> */}
       {/* <SentenceObjecحروفt/> */}
@@ -45,8 +46,7 @@ export default function Home() {
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
     {/* <SyllableAppwithCategory category="ق"/> */}
     {/* <MatchingLettersPicturs/> */}
-    {/* <BrokenGlass/> */}
-    <BouncingBalls/>
+    {/* <BouncingBalls/> */}
 
     {/* <div className="container  mt-4" dir="rtl">
       <DragWriteBoxWithGuides width={840} height={520} showGuides={true} downloadName="persian_practice.png" textTitle="آیلین و سِتایِش هَر روز با هَم بازی می کُنَند."/>
