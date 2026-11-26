@@ -25,7 +25,7 @@ export default function Home() {
   return (<>
   {/* <h4 className="bg-warning p-2 text-center rounded my-2 mx-1" style={{color:" #1a2099ff"}}> با بچه ها جملات زیر را تمرین کنید.</h4> */}
       <div className="container text-center my-4">
-      {/* <div className="bg-info h5 p-4"> کارخانگی بچه ها:جملات زیر را بخوانند و از روی 5 جمله آن بنویسند</div> */}
+      <div className="bg-info h5 p-4"> کارخانگی بچه ها:داستان زیر را بخوانند و از روی 4 جمله آن بنویسند</div>
       {/* <img src={`${process.env.PUBLIC_URL}/images/homework/dd.png`} className="w-100" alt="" /> */}
     </div>
 {/* <BalloonGame words={["بابا", "ناب", "بار", "باد", "بام", "باران", "بَد", "بَم", "بَر", "بُرد", "دار", "داد", "دَر", "دُر", "مادَر", "دارَم", "دارَد","مامان", "نام", "نان", "مَن", "نَم", "مار", "رَم", "نَرم"]} rounds={20}/>     */}
@@ -42,9 +42,9 @@ export default function Home() {
         description="متن فارسی داستان زیر را بخوانید."
         videoFileName={`${process.env.PUBLIC_URL}/video/fox&crew.mp4`}  // فقط اسم فایل ویدیوی mp4
       /> */}
-    {/* <StoryPage3 groupKey="alefba" wantedTitle="گُربِه‌ی کُوچِک" /> */}
+    <StoryPage3 groupKey="alefba" wantedTitle="اَسب" />
       <div className="container text-center my-5">
-        <div className="bg-warning h5 p-4"> لطفا بچه ها کلمات زیر را بخوانند و از روی آن یکبار بنویسند.</div>
+        {/* <div className="bg-warning h5 p-4"> لطفا بچه ها کلمات زیر را بخوانند و از روی آن یکبار بنویسند.</div> */}
         <WordHouseGame/>
       </div>
     <WordGameWithCategories initialCategory="فروشگاه" />
